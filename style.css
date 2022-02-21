@@ -1,0 +1,60 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+/* Variables */
+:root {
+	--font-stack: 'Quicksand', sans-serif;
+}
+
+/* Resets */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Base */
+body {
+	font-family: var(--font-stack);
+	background: hsl(208, 100%, 96%);
+	background: linear-gradient(
+		45deg,
+		hsl(208, 100%, 96%) 0%,
+		hsl(250, 37%, 97%) 100%
+	);
+	height: 100vh;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.main-head {
+	font-size: 5rem;
+	font-weight: 500;
+	color: hsl(360, 0%, 20%);
+}
+
+.main-sub {
+	margin-top: 1rem;
+	color: hsl(360, 0%, 40%);
+}
+
+.video-wrapper {
+	max-width: 800px;
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.video-wrapper iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+}
