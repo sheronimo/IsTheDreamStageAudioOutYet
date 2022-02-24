@@ -25,6 +25,10 @@
 	</head>
 	<body>
 		<h1 class="main-head">No :(</h1>
+		<p class="main-sub">
+			It has been <span id="daycount" class="daycount">0</span> days since the
+			premiere.
+		</p>
 		<p class="main-sub">In the mean time, watch the debut stage!</p>
 		<div class="video-wrapper">
 			<iframe
@@ -36,5 +40,13 @@
 				allowfullscreen
 			></iframe>
 		</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+			integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="app.js" defer></script>
 	</body>
 </html>
