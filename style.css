@@ -62,11 +62,17 @@ body {
 	width: 100%;
 	height: 3px;
 	background-color: hsl(0, 0%, 100%);
-	transform: scaleX(0.35);
-	transform-origin: left;
-	transition: transform 300ms ease-in;
 }
 
-.wb-link:hover::after {
-	transform: scaleX(1);
+@media (hover: hover) {
+	.wb-link::after {
+		transform: scaleX(0.35);
+		transform-origin: left;
+		transition: transform 300ms ease-in;
+	}
+
+	.wb-link:hover::after,
+	.wb-link:focus-within::after {
+		transform: scaleX(1);
+	}
 }
