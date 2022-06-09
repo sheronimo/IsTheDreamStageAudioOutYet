@@ -15,53 +15,58 @@
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 /* Base */
 body {
 	font-family: var(--font-stack);
-	background: hsl(208, 100%, 96%);
-	background: linear-gradient(
-		45deg,
-		hsl(208, 100%, 96%) 0%,
-		hsl(250, 37%, 97%) 100%
-	);
+	background: url(./teams2.jpg) no-repeat center center/cover;
+	background-blend-mode: multiply;
+	background-color: hsla(0, 0%, 0%, 0.6);
 	height: 100vh;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
+	gap: 1rem;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	overflow: hidden;
 	font-weight: 400;
+	color: hsl(0, 0%, 100%);
+	font-size: clamp(1.25rem, 2.5vw, 3rem);
 }
 
 .main-head {
-	font-size: 5rem;
+	font-size: clamp(4rem, 10vw, 10rem);
 	font-weight: 600;
-	color: hsl(360, 0%, 20%);
 }
 
 .daycount {
-	font-size: 2rem;
 	margin: 0 0.5rem;
 	font-weight: 600;
 }
 
-.main-sub {
-	margin-top: 1rem;
-	color: hsl(360, 0%, 40%);
+.wb-link {
+	font-weight: 600;
+	position: relative;
+	padding-block: 0.75rem;
 }
 
-.video-wrapper {
-	max-width: 800px;
+.wb-link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	width: 100%;
-	margin-top: 2rem;
+	height: 3px;
+	background-color: hsl(0, 0%, 100%);
+	transform: scaleX(0.35);
+	transform-origin: left;
+	transition: transform 300ms ease-in;
 }
 
-.video-wrapper iframe {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 16/9;
+.wb-link:hover::after {
+	transform: scaleX(1);
 }

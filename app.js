@@ -1,19 +1,16 @@
 function dateDifference() {
 	const dateDebut = dayjs('2021-12-18');
-	const dateToday = dayjs();
+	const dateRelease = dayjs('2022-06-13');
 
-	return dateToday.diff(dateDebut, 'days');
+	return dateRelease.diff(dateDebut, 'days');
 }
 
-(function updateCount() {
-	const el = document.querySelector('#daycount');
-	const baseCount = parseInt(el.innerText);
-	const datediff = dateDifference();
+function updateCount() {
+	const dayCountElement = document.querySelector('#daycount');
+	const dayCount = dateDifference();
+	console.log(dayCount);
 
-	if (baseCount < datediff) {
-		el.innerText = baseCount + 1;
-		setTimeout(updateCount, 25);
-	} else {
-		el.innerText = datediff;
-	}
-})();
+	dayCountElement.innerText = dayCount;
+}
+
+updateCount();
